@@ -15,7 +15,9 @@
       # List packages installed in system profile. To search by name, run:
       # $ nix-env -qaP | grep wget
       environment.systemPackages =
-        [ pkgs.vim
+        [ 
+           pkgs.vim
+           pkgs.lazygit
         ];
 
       # Necessary for using flakes on this system.
