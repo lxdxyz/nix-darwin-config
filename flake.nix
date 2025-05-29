@@ -33,6 +33,13 @@
 
       # The platform the configuration will be used on.
       nixpkgs.hostPlatform = "aarch64-darwin";
+    
+      system.primaryUser = "lxdxyz"; 
+      system.defaults.CustomUserPreferences = {
+        "com.apple.dock" = {
+          autohide = true;
+        };
+      };
     };
   in
   {
