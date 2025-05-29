@@ -36,23 +36,57 @@
       # The platform the configuration will be used on.
       nixpkgs.hostPlatform = "aarch64-darwin";
     
-      system.primaryUser = "lxdxyz"; 
+      system.primaryUser = "lxdxyz";
 
       system.defaults = {
+        dock = {
+          # 自动隐藏dock
+          autohide = true;
+          # 隐藏应用透明
+          showhidden = true;
+          # 禁用最近项目
+          show-recents = false;
+          # 禁用运行中的应用指示器
+          show-process-indicators = false;
+          # 取消所有固定应用
+          persistent-apps = [];
+          # 固定在左侧   
+          orientation = "left";
+        };
         NSGlobalDomain = {
           InitialKeyRepeat = 10;
           KeyRepeat = 1;
+          # 禁用 按键重复
           ApplePressAndHoldEnabled = false;
+          # 自动隐藏顶部菜单栏
           _HIHideMenuBar = true;
+          # 支持fn和小键盘默认是数字
           AppleKeyboardUIMode = 3;
+          # 关闭鼠标自然滚动
+          "com.apple.swipescrolldirection" = false;
+          # 关闭智能破折号 将--替换——
+          NSAutomaticDashSubstitutionEnabled = false;
+          # 关闭智能句点
+          NSAutomaticPeriodSubstitutionEnabled = false;
+          # 关闭智能引号
+          NSAutomaticQuoteSubstitutionEnabled = false;
+          # 禁用自动大写
+          NSAutomaticCapitalizationEnabled = false;
+          # 保存文件使用详细列表视图
+          NSNavPanelExpandedStateForSaveMode = true;
+          NSNavPanelExpandedStateForSaveMode2 = true;
+          # 应用窗口调整大小速度
+          NSWindowResizeTime = 0.001;
+          # 默认保存文件到本地磁盘
+          NSDocumentSaveNewDocumentsToCloud = false;
+          # 滚动条点击跳转到点击位置
+          AppleScrollerPagingBehavior = true;
+          # 强制所有新窗口默认使用标签页模式
+          AppleWindowTabbingMode = "always"; 
+          
         };
       }; 
      
-      system.defaults.CustomUserPreferences = {
-        "com.apple.dock" = {
-          autohide = true;
-        };
-      };
     };
   in
   {
