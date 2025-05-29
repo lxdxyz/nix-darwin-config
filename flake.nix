@@ -35,6 +35,14 @@
       nixpkgs.hostPlatform = "aarch64-darwin";
     
       system.primaryUser = "lxdxyz"; 
+
+      system.defaults = {
+        NSGlobalDomain = {
+          InitialKeyRepeat = 10;
+          KeyRepeat = 1;
+        };
+      }; 
+     
       system.defaults.CustomUserPreferences = {
         "com.apple.dock" = {
           autohide = true;
