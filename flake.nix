@@ -18,6 +18,7 @@
         [ 
            pkgs.vim
            pkgs.lazygit
+           pkgs.mise
         ];
 
       # Necessary for using flakes on this system.
@@ -35,6 +36,22 @@
 
       # The platform the configuration will be used on.
       nixpkgs.hostPlatform = "aarch64-darwin";
+
+      homebrew = {
+        enable = true;
+        casks = [
+          "1password"
+          "raycast"
+          "betterdisplay"
+          "wezterm"
+          "zen"
+          "firefox"
+          "clash-verge-rev"
+          "visual-studio-code"
+          "intellij-idea"
+        ];    
+      };
+
     
       system.primaryUser = "lxdxyz";
 
