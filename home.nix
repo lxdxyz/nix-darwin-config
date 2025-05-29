@@ -9,5 +9,11 @@
     userName = "lxdxyz";
     userEmail = "github@lxdxyz.com";
   };
+  programs.zsh = {
+    enable = true;
+    initContent = ''
+      eval "$(mise activate zsh)"
+    ''; 
+  };
 
 }
