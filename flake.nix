@@ -44,6 +44,7 @@
           KeyRepeat = 1;
           ApplePressAndHoldEnabled = false;
           _HIHideMenuBar = true;
+          AppleKeyboardUIMode = 3;
         };
       }; 
      
