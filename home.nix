@@ -9,6 +9,11 @@
     mise
     lazygit
   ];
+
+  programs.starship = {
+    enable = true;
+    enableZshIntegration = true; 
+  };
   
   programs.git = {
     enable = true;
