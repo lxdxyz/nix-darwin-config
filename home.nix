@@ -14,6 +14,9 @@
     enable = true;
   };
 
+  programs.wezterm = {
+    enable =true;
+  };
   programs.starship = {
     enable = true;
     enableZshIntegration = true; 

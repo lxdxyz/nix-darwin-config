@@ -44,7 +44,6 @@
         casks = [
           "raycast"
           "betterdisplay"
-          "wezterm"
           "zen"
           "firefox"
           "clash-verge-rev"
