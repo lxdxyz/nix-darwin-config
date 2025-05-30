@@ -40,7 +40,10 @@
 
       homebrew = {
         enable = true;
-        onActivation.cleanup = "uninstall";
+        onActivation.cleanup = "zap";
+        masApps = {
+          WeChat = 836500024;
+        };
         casks = [
           "raycast"
           "betterdisplay"
