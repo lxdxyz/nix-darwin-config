@@ -6,8 +6,11 @@
 
   home.packages = with pkgs; [
     neovim
-    mise
   ];
+
+  programs.mise = {
+    enable = true;
+  };
   
   programs.vscode = {
     enable = true;
@@ -47,9 +50,6 @@
   };
   programs.zsh = {
     enable = true;
-    initContent = ''
-      eval "$(mise activate zsh)"
-    ''; 
   };
 
 }
