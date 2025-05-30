@@ -21,6 +21,11 @@
     vimAlias = true;
   };
 
+  programs.eza = {
+    enable = true;
+    enableZshIntegration = true; 
+  };
+
   programs.lazygit = {
     enable = true;
   };
