@@ -9,6 +9,10 @@
     mise
     lazygit
   ];
+  
+  programs.vscode = {
+    enable = true;
+  };
 
   programs.starship = {
     enable = true;
