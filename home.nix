@@ -5,7 +5,7 @@
   home.stateVersion = "25.05";
 
   home.packages = with pkgs; [
-    neovim
+    
   ];
 
   programs.mise = {
@@ -14,6 +14,11 @@
   
   programs.vscode = {
     enable = true;
+  };
+
+  programs.neovim = {
+    enable = true;
+    vimAlias = true;
   };
 
   programs.lazygit = {
