@@ -74,8 +74,8 @@
           orientation = "left";
         };
         NSGlobalDomain = {
-          InitialKeyRepeat = 10;
-          KeyRepeat = 1;
+          InitialKeyRepeat = 25;
+          KeyRepeat = 2;
           # 禁用 按键重复
           ApplePressAndHoldEnabled = false;
           # 自动隐藏顶部菜单栏
