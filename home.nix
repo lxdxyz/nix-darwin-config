@@ -16,6 +16,10 @@
   programs.neovim = {
     enable = true;
     vimAlias = true;
+    extraLuaConfig = ''
+	vim.opt.number = true
+	vim.opt.relativenumber = true
+    '';
   };
 
   programs.eza = {
