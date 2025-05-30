@@ -17,8 +17,6 @@
       environment.systemPackages =
         [ 
            pkgs.vim
-           pkgs.lazygit
-           pkgs.mise
         ];
 
       # Necessary for using flakes on this system.

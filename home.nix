@@ -3,6 +3,12 @@
 { 
   programs.home-manager.enable = true;  
   home.stateVersion = "25.05";
+
+  home.packages = with pkgs; [
+    neovim
+    mise
+    lazygit
+  ];
   
   programs.git = {
     enable = true;
