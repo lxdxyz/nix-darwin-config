@@ -5,7 +5,7 @@
   home.stateVersion = "25.05";
 
   home.packages = with pkgs; [
-    
+    gcc
   ];
 
   programs.mise = {
@@ -66,6 +66,10 @@
     syntaxHighlighting = {
       enable = true;
     };
+  };
+
+  programs.bat = {
+    enable = true;
   };
 
 }
