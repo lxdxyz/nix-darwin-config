@@ -27,7 +27,7 @@
       };
       # Enable alternative shell support in nix-darwin.
       # programs.fish.enable = true;
-
+      programs._1password-gui.enable = true;
       # Set Git commit hash for darwin-version.
       system.configurationRevision = self.rev or self.dirtyRev or null;
 
@@ -40,8 +40,8 @@
 
       homebrew = {
         enable = true;
+        onActivation.cleanup = "uninstall";
         casks = [
-          "1password"
           "raycast"
           "betterdisplay"
           "wezterm"
