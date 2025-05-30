@@ -27,7 +27,6 @@
       };
       # Enable alternative shell support in nix-darwin.
       # programs.fish.enable = true;
-      programs._1password-gui.enable = true;
       # Set Git commit hash for darwin-version.
       system.configurationRevision = self.rev or self.dirtyRev or null;
 
@@ -51,6 +50,9 @@
           "firefox"
           "clash-verge-rev"
           "intellij-idea"
+	  "visual-studio-code"
+	  "code-cli"
+	  "1password"
         ];    
       };
 
