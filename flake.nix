@@ -42,6 +42,7 @@
         onActivation.cleanup = "zap";
         masApps = {
           WeChat = 836500024;
+	  "WPS Office" = 1443749478;
         };
         casks = [
           "raycast"
