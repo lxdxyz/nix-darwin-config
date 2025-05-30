@@ -7,10 +7,13 @@
   home.packages = with pkgs; [
     neovim
     mise
-    lazygit
   ];
   
   programs.vscode = {
+    enable = true;
+  };
+
+  programs.lazygit = {
     enable = true;
   };
 
