@@ -51,7 +51,6 @@
           "clash-verge-rev"
           "intellij-idea"
 	  "visual-studio-code"
-	  "code-cli"
 	  "1password"
         ];    
       };

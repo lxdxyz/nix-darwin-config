@@ -63,6 +63,12 @@
     syntaxHighlighting = {
       enable = true;
     };
+    profileExtra = ''
+	if [ -d "/Applications/Visual Studio Code.app/Contents/Resources/app/bin" ]; then
+	    # 如果存在，则将其添加到 PATH
+	    export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
+	fi
+    '';
   };
 
   programs.bat = {
