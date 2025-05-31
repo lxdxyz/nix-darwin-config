@@ -24,6 +24,7 @@
   programs.neovim = {
     enable = true;
     vimAlias = true;
+    viAlias = true;
     extraLuaConfig = ''
 	vim.opt.number = true
 	vim.opt.relativenumber = true
