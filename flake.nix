@@ -56,6 +56,7 @@
           "intellij-idea"
           "visual-studio-code"
           "1password"
+	  "font-jetbrains-mono-nerd-font"
         ];    
       };
 
