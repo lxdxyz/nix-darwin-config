@@ -45,7 +45,7 @@
         onActivation.cleanup = "zap";
         masApps = {
           WeChat = 836500024;
-	  "WPS Office" = 1443749478;
+          "WPS Office" = 1443749478;
         };
         casks = [
           "raycast"
@@ -54,8 +54,8 @@
           "firefox"
           "clash-verge-rev"
           "intellij-idea"
-	  "visual-studio-code"
-	  "1password"
+          "visual-studio-code"
+          "1password"
         ];    
       };
 
@@ -119,17 +119,14 @@
     darwinConfigurations."lycoris" = nix-darwin.lib.darwinSystem {
       modules = [ 
                   configuration
-		  home-manager.darwinModules.home-manager
-		  {
+                  home-manager.darwinModules.home-manager
+                  {
                     users.users.lxdxyz.home = "/Users/lxdxyz";
-		    home-manager.useGlobalPkgs = true;
-		    home-manager.useUserPackages = true;
-		    home-manager.extraSpecialArgs = {inherit inputs;};
-		    home-manager.users.lxdxyz = ./home.nix;
-
-		    # Optionally, use home-manager.extraSpecialArgs to pass
-		    # arguments to home.nix
-		  }
+                    home-manager.useGlobalPkgs = true;
+                    home-manager.useUserPackages = true;
+                    home-manager.extraSpecialArgs = {inherit inputs;};
+                    home-manager.users.lxdxyz = ./home.nix;
+                  }
                 ];
     };
   };
