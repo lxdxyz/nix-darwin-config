@@ -1,12 +1,19 @@
-{ config, pkgs, ... }:
+{ config, pkgs, inputs, ... }:
 
 { 
+  imports = [
+    inputs.nixvim.homeManagerModules.nixvim
+  ];
   programs.home-manager.enable = true;  
   home.stateVersion = "25.05";
 
   home.packages = with pkgs; [
     gcc
   ];
+
+  programs.nixvim = {
+    enable = true;
+  };
 
   programs.gh = {
     enable = true;
@@ -18,17 +25,6 @@
 
   programs.mise = {
     enable = true;
-  };
-  
-
-  programs.neovim = {
-    enable = true;
-    vimAlias = true;
-    viAlias = true;
-    extraLuaConfig = ''
-	vim.opt.number = true
-	vim.opt.relativenumber = true
-    '';
   };
 
   programs.eza = {

@@ -7,9 +7,12 @@
     nix-darwin.inputs.nixpkgs.follows = "nixpkgs";
     home-manager.url = "github:nix-community/home-manager";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
+    nixvim = {
+      url = "github:nix-community/nixvim";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
-
-  outputs = inputs@{ self, nix-darwin, nixpkgs, home-manager }:
+  outputs = inputs@{ self, nix-darwin, nixpkgs, home-manager, nixvim }:
   let
     configuration = { pkgs, ... }: {
       # List packages installed in system profile. To search by name, run:
@@ -121,6 +124,7 @@
                     users.users.lxdxyz.home = "/Users/lxdxyz";
 		    home-manager.useGlobalPkgs = true;
 		    home-manager.useUserPackages = true;
+		    home-manager.extraSpecialArgs = {inherit inputs;};
 		    home-manager.users.lxdxyz = ./home.nix;
 
 		    # Optionally, use home-manager.extraSpecialArgs to pass
